@@ -1,1 +1,1 @@
-# pinnverse-pytorch-replication
+# PINNverse-pytorch-replication
