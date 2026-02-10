@@ -16,7 +16,8 @@ class MLP(nn.Module):
         )
         self.out_layer = nn.Linear(self.hidden_units, self.out_dim)
 
-    def forward(self, x):
+    def forward(self, x, t):
+        x = torch.cat((x, t), dim=1)
         x = self.in_layer(x)
         x = self.activation_fn(x)
         for layer in self.hidden:
